@@ -1,0 +1,210 @@
+/* Agro-Theme Design Tokens & CSS Utilities */
+:root {
+  --primary-900: #081c15;
+  --primary-800: #1b4332;
+  --primary-700: #2d6a4f;
+  --primary-600: #40916c;
+  --primary-500: #52b788;
+  --primary-400: #74c69d;
+  --primary-300: #95d5b2;
+  --primary-100: #d8f3dc;
+  --primary-50:  #f0fdf4;
+
+  --amber-600: #d97706;
+  --amber-500: #f59e0b;
+  --amber-100: #fef3c7;
+
+  --sky-600: #0284c7;
+  --sky-500: #0ea5e9;
+  --sky-100: #e0f2fe;
+
+  --rose-600: #e11d48;
+  --rose-100: #ffe4e6;
+
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50:  #f8fafc;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(64, 145, 108, 0.25);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f4f7f5;
+  color: var(--slate-800);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--slate-900);
+  font-weight: 600;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--slate-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+/* Glassmorphism & Custom Card Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease-in-out;
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.agro-gradient-card {
+  background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-900) 100%);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.agro-gradient-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(82, 183, 136, 0.25) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+}
+
+.badge-urgent {
+  background-color: var(--rose-100);
+  color: var(--rose-600);
+  border: 1px solid rgba(225, 29, 72, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-medium {
+  background-color: var(--amber-100);
+  color: var(--amber-600);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-success {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Pulse animation for active sensor / live indicator */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+/* Layout helper utilities */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar-wrapper {
+  width: 260px;
+  background-color: var(--primary-900);
+  color: #ffffff;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Print view styling */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .app-container {
+    display: block !important;
+  }
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .glass-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
