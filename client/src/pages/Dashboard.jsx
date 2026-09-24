@@ -114,9 +114,9 @@ export default function Dashboard() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', padding: '4px 12px', borderRadius: '99px', fontSize: '0.75rem', fontWeight: '600', marginBottom: '8px', color: '#95d5b2' }}>
               <Sparkles size={14} /> AI-ENHANCED AGRI-ADVISORY PLATFORM
             </div>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
+            <h1 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>
               {activePlot.plotName}
-            </h2>
+            </h1>
             <p style={{ fontSize: '0.9rem', color: '#d8f3dc' }}>
               {farmer?.name} | {farmer?.village}, {farmer?.district} • {activePlot.areaAcres} Acres • Soil: {activePlot.soilType}
             </p>

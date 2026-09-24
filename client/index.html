@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Sugarcane Irrigation Advisory | AI Smart Farming Platform</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH3PKSV5T7"></script>
     <script>
@@ -12,14 +13,62 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sugarcane AI Irrigation Advisory Platform | KJS-AGR-01</title>
-    <meta name="description" content="AI-Powered Smart Irrigation, Fertigation & Yield Prediction System for Sugarcane Farmers" />
+    <!-- On-page SEO meta tags -->
+    <meta name="description" content="AI sugarcane irrigation advisory for Indian farmers: soil moisture sensors, weather-based irrigation schedules, fertigation and yield prediction." />
+    <meta name="keywords" content="sugarcane irrigation, irrigation advisory, smart irrigation, AI farming, soil moisture sensor, drip irrigation schedule, fertigation, sugarcane yield prediction, precision agriculture India" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="DigiMark Project" />
+    <link rel="canonical" href="https://digimark-project.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <!-- Social sharing (Open Graph & X Cards) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sugarcane Irrigation Advisory | AI Smart Farming Platform" />
+    <meta property="og:description" content="AI-powered irrigation, fertigation and yield advisory for sugarcane farmers." />
+    <meta property="og:url" content="https://digimark-project.vercel.app/" />
+    <meta property="og:image" content="https://digimark-project.vercel.app/logo.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Sugarcane Irrigation Advisory | AI Smart Farming Platform" />
+    <meta name="twitter:description" content="AI-powered irrigation, fertigation and yield advisory for sugarcane farmers." />
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sugarcane AI Irrigation Advisory",
+      "url": "https://digimark-project.vercel.app/",
+      "applicationCategory": "AgricultureApplication",
+      "operatingSystem": "Web",
+      "description": "AI-powered sugarcane irrigation advisory with soil moisture telemetry, fertigation plans and yield prediction.",
+      "publisher": { "@type": "Organization", "name": "DigiMark Project", "url": "https://digimark-project.vercel.app/" }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-slate-50 text-slate-800 antialiased font-sans">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static, crawlable content. React replaces this block once the app loads. -->
+      <main style="max-width:860px;margin:40px auto;padding:0 20px;font-family:sans-serif;color:#1e293b;line-height:1.6">
+        <img src="/logo.svg" alt="Sugarcane AI irrigation advisory logo" width="56" height="56" />
+        <h1>Sugarcane Irrigation Advisory: AI Smart Irrigation for Farmers</h1>
+        <p>The Sugarcane AI Irrigation Advisory platform helps sugarcane farmers in India decide exactly when and how much to irrigate. It combines soil moisture sensor data, local weather forecasts and crop-stage models to give a clear, plot-level irrigation schedule, so farmers save water and electricity while protecting cane yield.</p>
+        <h2>Smart irrigation schedules from soil moisture sensors</h2>
+        <p>IoT soil moisture and temperature sensors report root-zone conditions for every plot. The advisory engine compares these readings with the target moisture for the crop stage and recommends the next drip irrigation date, run time and water volume per acre.</p>
+        <h2>Fertigation plans and sugarcane yield prediction</h2>
+        <p>The fertigation module suggests urea, DAP and potash doses by crop age, and the yield predictor estimates tonnes per acre from moisture, NDVI canopy health and plot area. Alerts and printable plot reports keep farmers and field officers informed.</p>
+        <h3>Explore the platform</h3>
+        <nav>
+          <ul>
+            <li><a href="/dashboard" title="Open the sugarcane farm dashboard">Farm dashboard and irrigation advisory</a></li>
+            <li><a href="/sensors" title="View soil moisture sensor telemetry and irrigation logs">Irrigation and soil moisture sensors</a></li>
+            <li><a href="/fertigation" title="See fertigation doses and sugarcane yield prediction">Fertigation plan and yield prediction</a></li>
+            <li><a href="/alerts" title="Read field alerts and download plot reports">Field alerts and advisory reports</a></li>
+            <li><a href="/settings" title="Manage farmer profile and plot settings">Farmer profile and settings</a></li>
+          </ul>
+        </nav>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

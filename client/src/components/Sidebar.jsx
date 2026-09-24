@@ -66,6 +66,7 @@ export default function Sidebar() {
             <NavLink
               key={item.path}
               to={item.path}
+              title={`Go to ${item.label}`}
               className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               style={({ isActive }) => ({
                 display: 'flex',
